@@ -17,12 +17,6 @@ const App = () => {
   };
 
   const handleOperatorClick = (operator) => {
-    // if (input !== "") {
-    //   setInput(input + operator);
-    //   setDisplay(operator);
-    //   setResult("");
-    // }
-    // Remove consecutive operators, keeping only the last one (excluding the negative sign)
     const sanitizedInput = input.replace(/([-+*/])\1+/g, "$1");
 
     setInput(sanitizedInput + operator);
@@ -64,7 +58,7 @@ const App = () => {
   };
 
   return (
-    <div className="calculator">
+    <main className="calculator">
       <div id="display" className="display">
         {display}
       </div>
@@ -119,7 +113,7 @@ const App = () => {
       <button id="decimal" onClick={handleDecimalClick}>
         .
       </button>
-    </div>
+    </main>
   );
 };
 
